@@ -1,0 +1,148 @@
+:root {
+  --bg: #FFF5F9;
+  --panel: #ffffff;
+  --text: #4A3A42;
+  --muted: #8C7A85;
+  --accent: #E8A1C4;
+  --accent2: #C97AA8;
+  --border: #e9e0e6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  padding: 40px 16px;
+  color: var(--text);
+}
+
+.todoapp {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.app-title {
+  font-size: 56px;
+  text-align: center;
+  color: var(--accent2);
+  margin-bottom: 24px;
+}
+
+.header-row {
+  display: flex;
+  gap: 12px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.toggle-all {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+}
+
+.new-todo {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.todo-check {
+  accent-color: var(--accent);
+}
+
+.todo-text {
+  flex: 1;
+}
+
+.destroy {
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.todo-item:hover .destroy {
+  opacity: 1;
+  color: var(--accent2);
+}
+
+.edit-input {
+  flex: 1;
+  font-size: 16px;
+  padding: 6px 8px;
+}
+
+.footer {
+  margin-top: 14px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-count {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.filters a {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.filters a.selected {
+  color: var(--accent2);
+}
+
+.clear-completed {
+  border: none;
+  background: rgba(232,161,196,0.2);
+  color: var(--accent2);
+  padding: 6px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}

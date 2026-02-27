@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloom List 🌺</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="todoapp">
+    <h1 class="app-title">Bloom List 🌺</h1>
+
+    <div class="header-row">
+      <input type="checkbox" id="toggle-all" class="toggle-all" />
+
+      <input
+        type="text"
+        id="todo-input"
+        class="new-todo"
+        placeholder="Add a task and press Enter..."
+        autocomplete="off"
+      />
+    </div>
+
+    <ul id="todo-list" class="todo-list"></ul>
+
+    <footer id="footer" class="footer hidden">
+      <span id="todo-count" class="todo-count"></span>
+
+      <ul class="filters">
+        <li><a href="#/" data-filter="all" class="selected">All</a></li>
+        <li><a href="#/active" data-filter="active">Active</a></li>
+        <li><a href="#/completed" data-filter="completed">Completed</a></li>
+      </ul>
+
+      <button id="clear-completed" class="clear-completed hidden">
+        Clear completed
+      </button>
+    </footer>
+  </main>
+
+  <!-- JS -->
+  <script src="app.js"></script>
+</body>
+</html>
